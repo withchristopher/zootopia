@@ -41,3 +41,13 @@ https://expressjs.com/en/api.html#res
     req.query is multifaceted, often combining multiple parameters, whereas req.param is specific to a single property, often intended to retrieve a single record.
 }
 
+{
+    Security about POST:
+    {
+        Accepting data from a client can be risky. 
+        While we expect to receive the type of data we asked for, 
+        there is nothing stopping a user from sending incorrect or malicious data to our server. 
+        For this reason, there are validation libraries that ensure (on the server side) that the data meets certain criteria.
+    }
+    Check our Express validator
+}
