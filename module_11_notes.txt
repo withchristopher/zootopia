@@ -35,3 +35,9 @@ https://expressjs.com/en/api.html#res
         A param route must come after the other GET route.
     }
 }
+
+{
+    Difference and appropriate use case for req.param vs. raq.qurey:
+    req.query is multifaceted, often combining multiple parameters, whereas req.param is specific to a single property, often intended to retrieve a single record.
+}
+
