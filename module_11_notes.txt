@@ -15,3 +15,23 @@ The second takeaway is that we are using the send() method from the res paramete
 https://expressjs.com/en/api.html#res
  https://expressjs.com/en/api.html#req 
 }
+
+{ 
+    Difference between Development and Production:
+    Dev environment, local environment on your machine. Nothing developed affects production.
+    Separate keys and config files. All code tested.
+    Release: Users get updates first,
+    Development:
+    Staging: Add a layer of QA, helps test changes, replica of production environment.
+    Production: Tested, Production Database (Cloud hosted). ENV vairables separate to Dev variables.
+    - Cloud hosted
+    - Separate to
+    Enterprise: AWS, Azure
+}
+
+{
+    App Routes.
+    {
+        A param route must come after the other GET route.
+    }
+}
