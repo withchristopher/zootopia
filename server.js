@@ -1,4 +1,6 @@
 // declare animals.json, express server,
+const fs = require('fs');
+const path = require('path');
 const { animals } = require('./data/animals.json');
 const express = require('express');
 const PORT = process.env.PORT || 3001;
@@ -53,6 +55,17 @@ function findById(id, animalsArray) {
     return result;
 }
 
+function createNewAnimal(body, animalsArray) {
+    const animal = body;
+    animalsArray.push(animal);
+    fs.writeFileSync(
+        path.join(__dirname, './data/animals.json'),
+        JSON.stringify({ animals: animalsArray }, null, 2)
+    );
+    // return finsihed code to post route for response.
+    return animal;
+}
+
 // route to aniamls api
 app.get('/api/animals', (req, res) => {
     let results = animals;
@@ -73,7 +86,11 @@ app.get('/api/animals/:id', (req, res) => {
 
 app.post('/api/animals', (req, res) => {
     // req.body is where our incoming content will be
-    console.log(req.body);
+    req.body.id = animals.length.toString();
+
+    // add animal to json file and animals array in this function
+    const animal = createNewAnimal(req.body, animals);
+
     res.json(req.body);
 })
 
