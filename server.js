@@ -10,6 +10,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
+// add middleware to server to serve CSS and JS files in public folder
+app.use(express.static('public'));
 
 // function declaration
 function filterByQuery(query, animalsArray) {
@@ -108,6 +110,16 @@ app.post('/api/animals', (req, res) => {
         const animal = createNewAnimal(req.body, animals);
         res.json(animal);
     }
+});
+
+// serve html routes
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+// serve animals.html
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
 });
 
 // listener for server on port 3001
