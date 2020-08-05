@@ -43,7 +43,7 @@ const handleAnimalFormSubmit = event => {
         })
         .then(postResponse => {
             console.log(postResponse);
-            alert('thank you for adding an animal!');
+            alert('Thank you for adding an animal!');
         });
 };
 
