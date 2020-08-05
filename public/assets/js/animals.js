@@ -1,4 +1,4 @@
-const { response } = require("express");
+const { response } = require('express');
 
 const $animalForm = document.querySelector('#animals-form');
 const $displayArea = document.querySelector('#display-area');
