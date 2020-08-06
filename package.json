@@ -1,30 +1,31 @@
 {
-    "name": "zootopia",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "test": "jest",
-        "start": "node server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/withchristopher/zootopia.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/withchristopher/zootopia/issues"
-    },
-    "homepage": "https://github.com/withchristopher/zootopia#readme",
-    "dependencies": {
-        "express": "^4.17.1"
-    },
-    "directories": {
-        "lib": "lib"
-    },
-    "devDependencies": {
-        "jest": "^26.2.2"
-    }
+  "name": "zootopia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withchristopher/zootopia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/withchristopher/zootopia/issues"
+  },
+  "homepage": "https://github.com/withchristopher/zootopia#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "require": "^2.4.20"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "jest": "^26.2.2"
+  }
 }

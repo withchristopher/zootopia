@@ -8,7 +8,7 @@ const {
 const { animals } = require("../data/animals");
 const { JestEnvironment } = require("@jest/environment");
 
-jest.mock('fs');
+jest.mock("fs");
 
 test("creates an animal object", () => {
     const animal = createNewAnimal({ name: "Darlene", id: "jhgdja3ng2" },
